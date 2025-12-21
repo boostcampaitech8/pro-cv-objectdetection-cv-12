@@ -1,0 +1,19 @@
+{"time":"2025-12-08T12:03:55.0182305Z","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-12-08T12:03:55.415827452Z","level":"INFO","msg":"stream: created new stream","id":"wsyf7gez"}
+{"time":"2025-12-08T12:03:55.415977514Z","level":"INFO","msg":"stream: started","id":"wsyf7gez"}
+{"time":"2025-12-08T12:03:55.415997316Z","level":"INFO","msg":"handler: started","stream_id":"wsyf7gez"}
+{"time":"2025-12-08T12:03:55.416053455Z","level":"INFO","msg":"writer: started","stream_id":"wsyf7gez"}
+{"time":"2025-12-08T12:03:55.416053455Z","level":"INFO","msg":"sender: started","stream_id":"wsyf7gez"}
+{"time":"2025-12-08T12:19:11.962650469Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":255}
+{"time":"2025-12-08T12:19:12.460437211Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2025-12-08T12:49:01.784650112Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":671}
+{"time":"2025-12-08T12:49:02.094100108Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":1}
+{"time":"2025-12-08T18:13:00.428046354Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": read tcp 198.18.6.117:33752->35.186.228.49:443: read: connection reset by peer"}
+{"time":"2025-12-08T19:18:36.516687023Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":6101}
+{"time":"2025-12-08T19:18:36.692891789Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":6}
+{"time":"2025-12-08T20:03:00.308038259Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-08T20:03:00.627065354Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-12-08T20:03:00.631963641Z","level":"INFO","msg":"stream: closing","id":"wsyf7gez"}
+{"time":"2025-12-08T20:03:00.631988436Z","level":"INFO","msg":"handler: closed","stream_id":"wsyf7gez"}
+{"time":"2025-12-08T20:03:00.632058246Z","level":"INFO","msg":"sender: closed","stream_id":"wsyf7gez"}
+{"time":"2025-12-08T20:03:00.632066356Z","level":"INFO","msg":"stream: closed","id":"wsyf7gez"}

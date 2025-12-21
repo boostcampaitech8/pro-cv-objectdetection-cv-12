@@ -1,0 +1,16 @@
+{"time":"2025-12-07T15:21:42.577172945Z","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpj5brxan1/port-1378805.txt","pid":1378805,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-12-07T15:21:42.577784159Z","level":"INFO","msg":"server: will exit if parent process dies","ppid":1378805}
+{"time":"2025-12-07T15:21:42.577784159Z","level":"INFO","msg":"server: accepting connections","addr":{"Name":"/tmp/wandb-1378805-1378870-1688066202/socket","Net":"unix"}}
+{"time":"2025-12-07T15:21:42.758743748Z","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(@)"}
+{"time":"2025-12-07T15:21:42.764905907Z","level":"INFO","msg":"handleInformInit: received","streamId":"duytc9mi","id":"1(@)"}
+{"time":"2025-12-07T15:21:43.146792495Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"duytc9mi","id":"1(@)"}
+{"time":"2025-12-07T23:08:26.576903084Z","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"duytc9mi","id":"1(@)"}
+{"time":"2025-12-07T23:08:26.579423331Z","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"duytc9mi","id":"1(@)"}
+{"time":"2025-12-07T23:08:26.632967508Z","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(@)"}
+{"time":"2025-12-07T23:08:26.632990737Z","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(@)"}
+{"time":"2025-12-07T23:08:26.632990737Z","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-12-07T23:08:26.633043593Z","level":"INFO","msg":"connection: closing","id":"1(@)"}
+{"time":"2025-12-07T23:08:26.633044281Z","level":"INFO","msg":"server: listener closed","addr":{"Name":"/tmp/wandb-1378805-1378870-1688066202/socket","Net":"unix"}}
+{"time":"2025-12-07T23:08:26.633100936Z","level":"INFO","msg":"connection: closed successfully","id":"1(@)"}
+{"time":"2025-12-07T23:08:26.633108994Z","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(@)"}
+{"time":"2025-12-07T23:08:26.633128181Z","level":"INFO","msg":"server is closed"}

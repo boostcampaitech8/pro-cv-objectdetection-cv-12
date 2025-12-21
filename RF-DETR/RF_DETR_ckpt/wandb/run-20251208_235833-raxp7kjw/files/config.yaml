@@ -1,0 +1,139 @@
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            d0ati1yjxclg0whz3g46ht3ucjuahzx9:
+                codePath: pybum_bumjin/baseline/faster_rcnn/rfdetr_train.ipynb
+                cpu_count: 8
+                cpu_count_logical: 8
+                cudaVersion: "12.2"
+                disk:
+                    /:
+                        total: "52573995008"
+                        used: "38285164544"
+                email: kimbum1018@gmail.com
+                executable: /data/ephemeral/home/pybum/bin/python
+                gpu: Tesla V100-SXM2-32GB
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Volta
+                      cudaCores: 5120
+                      memoryTotal: "34359738368"
+                      name: Tesla V100-SXM2-32GB
+                      uuid: GPU-b8984d8d-1d0e-07f1-2bb5-cf00c2eb72f9
+                host: instance-17204
+                memory:
+                    total: "94903173120"
+                os: Linux-5.4.0-99-generic-x86_64-with-glibc2.31
+                program: pybum_bumjin/baseline/faster_rcnn/rfdetr_train.ipynb
+                python: CPython 3.10.13
+                root: ./RF_DETR_ckpt
+                startedAt: "2025-12-08T23:58:33.347644Z"
+                writerId: d0ati1yjxclg0whz3g46ht3ucjuahzx9
+        m: []
+        python_version: 3.10.13
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 71
+                - 98
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 71
+                - 98
+            "3":
+                - 13
+                - 16
+            "4": 3.10.13
+            "5": 0.23.0
+            "6": 4.57.3
+            "8":
+                - 1
+            "12": 0.23.0
+            "13": linux-x86_64
+batch_size:
+    value: 4
+checkpoint_interval:
+    value: 5
+class_names:
+    value: null
+cls_loss_coef:
+    value: 1
+dataset_dir:
+    value: ../../../dataset_split15/
+dataset_file:
+    value: roboflow
+do_random_resize_via_padding:
+    value: true
+drop_path:
+    value: 0
+early_stopping:
+    value: true
+early_stopping_min_delta:
+    value: 0.001
+early_stopping_patience:
+    value: 5
+early_stopping_use_ema:
+    value: false
+ema_decay:
+    value: 0.993
+ema_tau:
+    value: 100
+epochs:
+    value: 32
+expanded_scales:
+    value: true
+grad_accum_steps:
+    value: 4
+group_detr:
+    value: 13
+ia_bce_loss:
+    value: true
+lr:
+    value: 0.0001
+lr_component_decay:
+    value: 0.7
+lr_drop:
+    value: 100
+lr_encoder:
+    value: 0.00015
+lr_vit_layer_decay:
+    value: 0.8
+multi_scale:
+    value: true
+num_select:
+    value: 300
+num_workers:
+    value: 2
+output_dir:
+    value: ./RF_DETR_ckpt
+project:
+    value: RFDETR
+run:
+    value: RFDETR_medium
+run_test:
+    value: true
+segmentation_head:
+    value: false
+square_resize_div_64:
+    value: true
+tensorboard:
+    value: true
+use_ema:
+    value: true
+wandb:
+    value: true
+warmup_epochs:
+    value: 0
+weight_decay:
+    value: 0.0001

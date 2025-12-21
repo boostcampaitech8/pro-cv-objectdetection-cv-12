@@ -1,0 +1,36 @@
+W&B logging initialized. To monitor logs, open https://wandb.ai/kimbum/uncategorized/runs/4hjw0ekh.
+Not using distributed mode
+fatal: not a git repository (or any parent up to mount point /data)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+git:
+  sha: N/A, status: clean, branch: N/A
+
+Namespace(num_classes=10, grad_accum_steps=2, amp=True, lr=0.0001, lr_encoder=0.00015, batch_size=16, weight_decay=0.0001, epochs=10, lr_drop=100, clip_max_norm=0.1, lr_vit_layer_decay=0.8, lr_component_decay=0.7, do_benchmark=False, dropout=0, drop_path=0.0, drop_mode='standard', drop_schedule='constant', cutoff_epoch=0, pretrained_encoder=None, pretrain_weights='rf-detr-medium.pth', pretrain_exclude_keys=None, pretrain_keys_modify_to_load=None, pretrained_distiller=None, encoder='dinov2_windowed_small', vit_encoder_num_layers=12, window_block_indexes=None, position_embedding='sine', out_feature_indexes=[3, 6, 9, 12], freeze_encoder=False, layer_norm=True, rms_norm=False, backbone_lora=False, force_no_pretrain=False, dec_layers=4, dim_feedforward=2048, hidden_dim=256, sa_nheads=8, ca_nheads=16, num_queries=300, group_detr=13, two_stage=True, projector_scale=['P4'], lite_refpoint_refine=True, num_select=300, dec_n_points=2, decoder_norm='LN', bbox_reparam=True, freeze_batch_norm=False, set_cost_class=2, set_cost_bbox=5, set_cost_giou=2, cls_loss_coef=1.0, bbox_loss_coef=5, giou_loss_coef=2, focal_alpha=0.25, aux_loss=True, sum_group_losses=False, use_varifocal_loss=False, use_position_supervised_loss=False, ia_bce_loss=True, dataset_file='roboflow', coco_path=None, dataset_dir='../../../dataset', square_resize_div_64=True, output_dir='./RF_DETR_ckpt', dont_save_weights=False, checkpoint_interval=50, seed=42, resume='', start_epoch=0, eval=False, use_ema=True, ema_decay=0.993, ema_tau=100, num_workers=2, device='cuda', world_size=1, dist_url='env://', sync_bn=True, fp16_eval=False, encoder_only=False, backbone_only=False, resolution=576, use_cls_token=False, multi_scale=True, expanded_scales=True, do_random_resize_via_padding=False, warmup_epochs=0.0, lr_scheduler='step', lr_min_factor=0.0, early_stopping=True, early_stopping_patience=10, early_stopping_min_delta=0.001, early_stopping_use_ema=False, gradient_checkpointing=False, patch_size=16, num_windows=2, positional_encoding_size=36, mask_downsample_ratio=4, tensorboard=True, wandb=True, project=None, run=None, class_names=['General trash', 'Paper', 'Paper pack', 'Metal', 'Glass', 'Plastic', 'Styrofoam', 'Plastic bag', 'Battery', 'Clothing'], run_test=True, segmentation_head=False, distributed=False)
+number of params: 33396020
+[736]
+loading annotations into memory...
+Done (t=0.07s)
+creating index...
+index created!
+[736]
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+[736]
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Get benchmark
+Start training
+Grad accum steps:  2
+Total batch size:  32
+LENGTH OF DATA LOADER: 122
+UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+Epoch: [0]  [  0/122]  eta: 0:14:10  lr: 0.000100  class_error: 83.35  loss: 10.2305 (10.2305)  loss_ce: 1.0546 (1.0546)  loss_bbox: 0.2912 (0.2912)  loss_giou: 0.6239 (0.6239)  loss_ce_0: 1.0200 (1.0200)  loss_bbox_0: 0.3773 (0.3773)  loss_giou_0: 0.6989 (0.6989)  loss_ce_1: 1.0299 (1.0299)  loss_bbox_1: 0.3353 (0.3353)  loss_giou_1: 0.6556 (0.6556)  loss_ce_2: 1.0456 (1.0456)  loss_bbox_2: 0.3185 (0.3185)  loss_giou_2: 0.6307 (0.6307)  loss_ce_enc: 0.9939 (0.9939)  loss_bbox_enc: 0.4157 (0.4157)  loss_giou_enc: 0.7393 (0.7393)  loss_ce_unscaled: 1.0546 (1.0546)  class_error_unscaled: 83.3474 (83.3474)  loss_bbox_unscaled: 0.0582 (0.0582)  loss_giou_unscaled: 0.3120 (0.3120)  cardinality_error_unscaled: 3793.6875 (3793.6875)  loss_ce_0_unscaled: 1.0200 (1.0200)  loss_bbox_0_unscaled: 0.0755 (0.0755)  loss_giou_0_unscaled: 0.3495 (0.3495)  cardinality_error_0_unscaled: 3538.5000 (3538.5000)  loss_ce_1_unscaled: 1.0299 (1.0299)  loss_bbox_1_unscaled: 0.0671 (0.0671)  loss_giou_1_unscaled: 0.3278 (0.3278)  cardinality_error_1_unscaled: 3672.5000 (3672.5000)  loss_ce_2_unscaled: 1.0456 (1.0456)  loss_bbox_2_unscaled: 0.0637 (0.0637)  loss_giou_2_unscaled: 0.3154 (0.3154)  cardinality_error_2_unscaled: 3710.2500 (3710.2500)  loss_ce_enc_unscaled: 0.9939 (0.9939)  loss_bbox_enc_unscaled: 0.0831 (0.0831)  loss_giou_enc_unscaled: 0.3696 (0.3696)  cardinality_error_enc_unscaled: 3751.0625 (3751.0625)  time: 6.9748  data: 1.9934  max mem: 19863
+Epoch: [0]  [ 10/122]  eta: 0:07:53  lr: 0.000100  class_error: 78.05  loss: 9.9960 (9.9761)  loss_ce: 1.1955 (1.1771)  loss_bbox: 0.2912 (0.2663)  loss_giou: 0.4824 (0.4788)  loss_ce_0: 1.1895 (1.1606)  loss_bbox_0: 0.3143 (0.3202)  loss_giou_0: 0.4947 (0.5253)  loss_ce_1: 1.1739 (1.1692)  loss_bbox_1: 0.3205 (0.2944)  loss_giou_1: 0.5056 (0.5048)  loss_ce_2: 1.1878 (1.1790)  loss_bbox_2: 0.2986 (0.2786)  loss_giou_2: 0.4800 (0.4893)  loss_ce_enc: 1.1108 (1.1082)  loss_bbox_enc: 0.4157 (0.4140)  loss_giou_enc: 0.5876 (0.6105)  loss_ce_unscaled: 1.1955 (1.1771)  class_error_unscaled: 78.0488 (75.9530)  loss_bbox_unscaled: 0.0582 (0.0533)  loss_giou_unscaled: 0.2412 (0.2394)  cardinality_error_unscaled: 3888.6875 (3871.2955)  loss_ce_0_unscaled: 1.1895 (1.1606)  loss_bbox_0_unscaled: 0.0629 (0.0640)  loss_giou_0_unscaled: 0.2473 (0.2626)  cardinality_error_0_unscaled: 3884.3125 (3806.7159)  loss_ce_1_unscaled: 1.1739 (1.1692)  loss_bbox_1_unscaled: 0.0641 (0.0589)  loss_giou_1_unscaled: 0.2528 (0.2524)  cardinality_error_1_unscaled: 3887.8125 (3844.4205)  loss_ce_2_unscaled: 1.1878 (1.1790)  loss_bbox_2_unscaled: 0.0597 (0.0557)  loss_giou_2_unscaled: 0.2400 (0.2446)  cardinality_error_2_unscaled: 3892.0625 (3858.6136)  loss_ce_enc_unscaled: 1.1108 (1.1082)  loss_bbox_enc_unscaled: 0.0831 (0.0828)  loss_giou_enc_unscaled: 0.2938 (0.3053)  cardinality_error_enc_unscaled: 3867.8750 (3844.5909)  time: 4.2300  data: 0.2479  max mem: 25687
+Using a different number of positional encodings than DINOv2, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+Using patch size 16 instead of 14, which means we're not loading DINOv2 backbone weights. This is not a problem if finetuning a pretrained RF-DETR model.
+Loading pretrain weights
+TensorBoard logging initialized. To monitor logs, use 'tensorboard --logdir ./RF_DETR_ckpt' and open http://localhost:6006/ in browser.

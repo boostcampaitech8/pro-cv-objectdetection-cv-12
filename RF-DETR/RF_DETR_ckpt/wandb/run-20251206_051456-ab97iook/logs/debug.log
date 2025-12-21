@@ -1,0 +1,18 @@
+2025-12-06 05:14:56,577 INFO    MainThread:989262 [wandb_init.py:setup_run_log_directory():713] Logging user logs to ./RF_DETR_ckpt/wandb/run-20251206_051456-ab97iook/logs/debug.log
+2025-12-06 05:14:56,578 INFO    MainThread:989262 [wandb_init.py:setup_run_log_directory():714] Logging internal logs to ./RF_DETR_ckpt/wandb/run-20251206_051456-ab97iook/logs/debug-internal.log
+2025-12-06 05:14:56,578 INFO    MainThread:989262 [wandb_init.py:init():840] calling init triggers
+2025-12-06 05:14:56,578 INFO    MainThread:989262 [wandb_init.py:init():845] wandb.init called with sweep_config: {}
+config: {'lr': 0.0001, 'lr_encoder': 0.00015, 'batch_size': 8, 'grad_accum_steps': 2, 'epochs': 20, 'ema_decay': 0.993, 'ema_tau': 100, 'lr_drop': 100, 'checkpoint_interval': 50, 'warmup_epochs': 0.0, 'lr_vit_layer_decay': 0.8, 'lr_component_decay': 0.7, 'drop_path': 0.0, 'group_detr': 13, 'ia_bce_loss': True, 'cls_loss_coef': 1.0, 'num_select': 300, 'dataset_file': 'roboflow', 'square_resize_div_64': True, 'dataset_dir': '../../../dataset_tagging/', 'output_dir': './RF_DETR_ckpt', 'multi_scale': True, 'expanded_scales': True, 'do_random_resize_via_padding': False, 'use_ema': True, 'num_workers': 2, 'weight_decay': 0.0001, 'early_stopping': True, 'early_stopping_patience': 10, 'early_stopping_min_delta': 0.001, 'early_stopping_use_ema': False, 'tensorboard': True, 'wandb': True, 'project': None, 'run': None, 'class_names': None, 'run_test': True, 'segmentation_head': False, '_wandb': {}}
+2025-12-06 05:14:57,760 INFO    MainThread:989262 [wandb_init.py:init():888] starting backend
+2025-12-06 05:14:57,760 INFO    MainThread:989262 [wandb_init.py:init():891] sending inform_init request
+2025-12-06 05:14:57,761 INFO    MainThread:989262 [wandb_init.py:init():899] backend started and connected
+2025-12-06 05:14:57,766 INFO    MainThread:989262 [wandb_run.py:_label_probe_notebook():1323] probe notebook
+2025-12-06 05:14:57,766 INFO    MainThread:989262 [wandb_run.py:_label_probe_notebook():1333] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-12-06 05:14:57,766 INFO    MainThread:989262 [wandb_init.py:init():969] updated telemetry
+2025-12-06 05:14:57,769 INFO    MainThread:989262 [wandb_init.py:init():993] communicating run to backend with 90.0 second timeout
+2025-12-06 05:14:58,518 INFO    MainThread:989262 [wandb_init.py:init():1040] starting run threads in backend
+2025-12-06 05:14:58,740 INFO    MainThread:989262 [wandb_run.py:_console_start():2504] atexit reg
+2025-12-06 05:14:58,740 INFO    MainThread:989262 [wandb_run.py:_redirect():2352] redirect: wrap_raw
+2025-12-06 05:14:58,740 INFO    MainThread:989262 [wandb_run.py:_redirect():2421] Wrapping output streams.
+2025-12-06 05:14:58,740 INFO    MainThread:989262 [wandb_run.py:_redirect():2444] Redirects installed.
+2025-12-06 05:14:58,742 INFO    MainThread:989262 [wandb_init.py:init():1080] run started, returning control to user process

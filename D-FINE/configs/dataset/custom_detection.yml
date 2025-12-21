@@ -1,0 +1,49 @@
+task: detection
+
+evaluator:
+  type: CocoEvaluator
+  iou_types: ['bbox', ]
+
+num_classes: 10 # your dataset classes
+remap_mscoco_category: False
+
+train_dataloader:
+  type: DataLoader
+  dataset:
+    type: CocoDetection
+    img_folder: ../../dataset_tagging/train
+    ann_file: ../../dataset_tagging/new_train_split.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops:
+        - {type: Resize, size: [1024, 1024]}
+        - {type: SanitizeBoundingBoxes, min_size: 1}
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}
+        - {type: ConvertBoxes, fmt: 'cxcywh', normalize: True}
+  shuffle: True
+  num_workers: 4
+  drop_last: True
+  collate_fn:
+    type: BatchImageCollateFunction
+
+
+val_dataloader:
+  type: DataLoader
+  dataset:
+    type: CocoDetection
+    img_folder: ../../dataset_tagging/valid
+    ann_file: ../../dataset_tagging/new_val_split.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops:
+        - {type: Resize, size: [1024,1024]}
+        - {type: SanitizeBoundingBoxes, min_size: 1}
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}
+        - {type: ConvertBoxes, fmt: 'cxcywh', normalize: True}
+  shuffle: False
+  num_workers: 4
+  drop_last: False
+  collate_fn:
+    type: BatchImageCollateFunction

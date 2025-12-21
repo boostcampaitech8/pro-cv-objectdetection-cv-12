@@ -1,0 +1,8 @@
+{"time":"2025-12-06T07:47:40.341371049Z","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-12-06T07:47:40.727095151Z","level":"INFO","msg":"stream: created new stream","id":"xeato85e"}
+{"time":"2025-12-06T07:47:40.727285966Z","level":"INFO","msg":"stream: started","id":"xeato85e"}
+{"time":"2025-12-06T07:47:40.727575784Z","level":"INFO","msg":"handler: started","stream_id":"xeato85e"}
+{"time":"2025-12-06T07:47:40.727575784Z","level":"INFO","msg":"writer: started","stream_id":"xeato85e"}
+{"time":"2025-12-06T07:47:40.727707205Z","level":"INFO","msg":"sender: started","stream_id":"xeato85e"}
+{"time":"2025-12-06T07:47:41.510949499Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":38}
+{"time":"2025-12-06T07:47:41.630697862Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":28}

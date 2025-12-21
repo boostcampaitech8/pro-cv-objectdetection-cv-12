@@ -1,0 +1,41 @@
+task: detection
+
+evaluator:
+  type: CocoEvaluator
+  iou_types: ['bbox', ]
+
+num_classes: 10  # your dataset classes
+remap_mscoco_category: False
+
+train_dataloader:
+  type: DataLoader
+  dataset:
+    type: CocoDetection
+    img_folder: ../../dataset_split15/train
+    ann_file: ../../dataset_split15/new_train_split_15.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: True
+  num_workers: 4
+  drop_last: True
+  collate_fn:
+    type: BatchImageCollateFunction
+
+
+val_dataloader:
+  type: DataLoader
+  dataset:
+    type: CocoDetection
+    img_folder: ../../dataset_split15/valid
+    ann_file: ../../dataset_split15/new_val_split_15.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: False
+  num_workers: 4
+  drop_last: False
+  collate_fn:
+    type: BatchImageCollateFunction

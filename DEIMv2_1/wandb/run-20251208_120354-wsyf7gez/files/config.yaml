@@ -1,0 +1,413 @@
+__include__:
+    value:
+        - ../dataset/custom_detection.yml
+        - ../runtime.yml
+        - ../base/dataloader.yml
+        - ../base/optimizer.yml
+        - ../base/deimv2.yml
+_wandb:
+    value:
+        cli_version: 0.23.0
+        e:
+            8car83bvfd9ac2my5o7dtq80n4n31lbj:
+                args:
+                    - -c
+                    - configs/deimv2/deimv2_dinov3_x_coco.yml
+                    - --use-amp
+                    - --seed=42
+                    - -t
+                    - ./weight/deimv2_dinov3_x_coco.pth
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 8
+                cpu_count_logical: 8
+                cudaVersion: "12.2"
+                disk:
+                    /:
+                        total: "52573995008"
+                        used: "38282895360"
+                executable: /data/ephemeral/home/pybum/bin/python
+                git:
+                    commit: 09d7c9d2b3e7c4c8ce5149daf2623b03d7e5ca75
+                    remote: https://github.com/Intellindust-AI-Lab/DEIMv2.git
+                gpu: Tesla V100-SXM2-32GB
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Volta
+                      cudaCores: 5120
+                      memoryTotal: "34359738368"
+                      name: Tesla V100-SXM2-32GB
+                      uuid: GPU-b8984d8d-1d0e-07f1-2bb5-cf00c2eb72f9
+                host: instance-17204
+                memory:
+                    total: "94903173120"
+                os: Linux-5.4.0-99-generic-x86_64-with-glibc2.31
+                program: /data/ephemeral/home/pybum_bumjin/DEIMv2/train.py
+                python: CPython 3.10.13
+                root: /data/ephemeral/home/pybum_bumjin/DEIMv2
+                startedAt: "2025-12-08T12:03:54.747576Z"
+                writerId: 8car83bvfd9ac2my5o7dtq80n4n31lbj
+        m: []
+        python_version: 3.10.13
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 63
+                - 71
+            "2":
+                - 1
+                - 5
+                - 11
+                - 41
+                - 49
+                - 53
+                - 63
+                - 71
+            "3":
+                - 2
+                - 13
+                - 16
+            "4": 3.10.13
+            "5": 0.23.0
+            "6": 4.57.3
+            "12": 0.23.0
+            "13": linux-x86_64
+DEIM:
+    value:
+        backbone: DINOv3STAs
+        decoder: DEIMTransformer
+        encoder: HybridEncoder
+DEIMCriterion:
+    value:
+        alpha: 0.75
+        gamma: 1.5
+        losses:
+            - mal
+            - boxes
+            - local
+        matcher:
+            alpha: 0.25
+            change_matcher: true
+            gamma: 2
+            iou_order_alpha: 4
+            matcher_change_epoch: 45
+            type: HungarianMatcher
+            weight_dict:
+                cost_bbox: 5
+                cost_class: 2
+                cost_giou: 2
+        reg_max: 32
+        weight_dict:
+            loss_bbox: 5
+            loss_ddf: 1.5
+            loss_fgl: 0.15
+            loss_giou: 2
+            loss_mal: 1
+DEIMTransformer:
+    value:
+        activation: silu
+        box_noise_scale: 1
+        cross_attn_method: default
+        dim_feedforward: 2048
+        eval_idx: -1
+        feat_channels:
+            - 256
+            - 256
+            - 256
+        feat_strides:
+            - 8
+            - 16
+            - 32
+        hidden_dim: 256
+        label_noise_ratio: 0.5
+        layer_scale: 1
+        mlp_act: silu
+        num_denoising: 100
+        num_layers: 6
+        num_levels: 3
+        num_points:
+            - 3
+            - 6
+            - 3
+        num_queries: 300
+        query_select_method: default
+        reg_max: 32
+        reg_scale: 4
+DINOv3STAs:
+    value:
+        conv_inplane: 64
+        finetune: true
+        hidden_dim: 256
+        interaction_indexes:
+            - 5
+            - 8
+            - 11
+        name: dinov3_vits16plus
+        weights_path: ./ckpts/dinov3_vits16plus_pretrain_lvd1689m-4057cbaa.pth
+HGNetv2:
+    value:
+        freeze_at: -1
+        freeze_norm: false
+        freeze_stem_only: true
+        local_model_dir: ./weight/hgnetv2/
+        name: B4
+        pretrained: false
+        return_idx:
+            - 1
+            - 2
+            - 3
+HybridEncoder:
+    value:
+        act: silu
+        csp_type: csp2
+        depth_mult: 1.37
+        dim_feedforward: 1024
+        dropout: 0
+        enc_act: gelu
+        expansion: 1.25
+        feat_strides:
+            - 8
+            - 16
+            - 32
+        fuse_op: sum
+        hidden_dim: 256
+        in_channels:
+            - 256
+            - 256
+            - 256
+        nhead: 8
+        num_encoder_layers: 1
+        use_encoder_idx:
+            - 2
+        version: deim
+PostProcessor:
+    value:
+        num_top_queries: 300
+checkpoint_freq:
+    value: 5
+clip_max_norm:
+    value: 0.1
+config:
+    value: configs/deimv2/deimv2_dinov3_x_coco.yml
+criterion:
+    value: DEIMCriterion
+ema:
+    value:
+        decay: 0.9999
+        start: 0
+        type: ModelEMA
+        warmups: 1000
+epoches:
+    value: 32
+eval_spatial_size:
+    value:
+        - 1024
+        - 1024
+evaluator:
+    value:
+        iou_types:
+            - bbox
+        type: CocoEvaluator
+find_unused_parameters:
+    value: true
+flat_epoch:
+    value: 14
+lr_gamma:
+    value: 0.5
+lr_scheduler:
+    value:
+        gamma: 0.1
+        milestones:
+            - 500
+        type: MultiStepLR
+lr_warmup_scheduler:
+    value:
+        type: LinearWarmup
+        warmup_duration: 500
+lrsheduler:
+    value: flatcosine
+model:
+    value: DEIM
+no_aug_epoch:
+    value: 12
+num_classes:
+    value: 10
+optimizer:
+    value:
+        betas:
+            - 0.9
+            - 0.999
+        lr: 0.0005
+        params:
+            - lr: 1e-05
+              params: ^(?=.*.dinov3)(?!.*(?:norm|bn|bias)).*$
+            - lr: 1e-05
+              params: ^(?=.*.dinov3)(?=.*(?:norm|bn|bias)).*$
+              weight_decay: 0
+            - params: ^(?=.*(?:sta|encoder|decoder))(?=.*(?:norm|bn|bias)).*$
+              weight_decay: 0
+        type: AdamW
+        weight_decay: 0.000125
+output_dir:
+    value: ./outputs/deimv2_dinov3_x_coco
+postprocessor:
+    value: PostProcessor
+print_freq:
+    value: 100
+print_method:
+    value: builtin
+print_rank:
+    value: 0
+remap_mscoco_category:
+    value: false
+scaler:
+    value:
+        enabled: true
+        type: GradScaler
+seed:
+    value: 42
+sync_bn:
+    value: true
+task:
+    value: detection
+test_only:
+    value: false
+train_dataloader:
+    value:
+        collate_fn:
+            area_threshold: 100
+            base_size: 1024
+            base_size_repeat: 3
+            copyblend_epochs:
+                - 4
+                - 19
+            copyblend_prob: 0.5
+            ema_restart_decay: 0.9999
+            expand_ratios:
+                - 0.1
+                - 0.25
+            mixup_epochs:
+                - 4
+                - 19
+            mixup_prob: 0.5
+            num_objects: 3
+            stop_epoch: 32
+            type: BatchImageCollateFunction
+            with_expand: true
+        dataset:
+            ann_file: ../../dataset_split15/new_train_split_15.json
+            img_folder: ../../dataset_split15/train
+            return_masks: false
+            transforms:
+                mosaic_prob: 0.5
+                ops:
+                    - fill_value: 0
+                      max_cached_images: 50
+                      output_size: 1024
+                      probability: 0.6
+                      random_pop: true
+                      rotation_range: 10
+                      scaling_range:
+                        - 0.8
+                        - 1.8
+                      translation_range:
+                        - 0.1
+                        - 0.1
+                      type: Mosaic
+                      use_cache: true
+                    - p: 0.5
+                      type: RandomPhotometricDistort
+                    - max_scale: 1
+                      min_scale: 0.4
+                      p: 0.4
+                      type: RandomIoUCrop
+                    - min_size: 1
+                      type: SanitizeBoundingBoxes
+                    - type: RandomHorizontalFlip
+                    - size:
+                        - 1024
+                        - 1024
+                      type: Resize
+                    - min_size: 1
+                      type: SanitizeBoundingBoxes
+                    - dtype: float32
+                      scale: true
+                      type: ConvertPILImage
+                    - mean:
+                        - 0.485
+                        - 0.456
+                        - 0.406
+                      std:
+                        - 0.229
+                        - 0.224
+                        - 0.225
+                      type: Normalize
+                    - fmt: cxcywh
+                      normalize: true
+                      type: ConvertBoxes
+                policy:
+                    epoch:
+                        - 5
+                        - 10
+                        - 15
+                    name: stop_epoch
+                    ops:
+                        - Mosaic
+                        - RandomPhotometricDistort
+                        - RandomZoomOut
+                        - RandomIoUCrop
+                type: Compose
+            type: CocoDetection
+        drop_last: true
+        num_workers: 4
+        shuffle: true
+        total_batch_size: 4
+        type: DataLoader
+tuning:
+    value: ./weight/deimv2_dinov3_x_coco.pth
+use_amp:
+    value: true
+use_ema:
+    value: true
+use_focal_loss:
+    value: true
+val_dataloader:
+    value:
+        collate_fn:
+            type: BatchImageCollateFunction
+        dataset:
+            ann_file: ../../dataset_split15/new_val_split_15.json
+            img_folder: ../../dataset_split15/valid
+            return_masks: false
+            transforms:
+                ops:
+                    - size:
+                        - 1024
+                        - 1024
+                      type: Resize
+                    - dtype: float32
+                      scale: true
+                      type: ConvertPILImage
+                    - mean:
+                        - 0.485
+                        - 0.456
+                        - 0.406
+                      std:
+                        - 0.229
+                        - 0.224
+                        - 0.225
+                      type: Normalize
+                type: Compose
+            type: CocoDetection
+        drop_last: false
+        num_workers: 4
+        shuffle: false
+        total_batch_size: 16
+        type: DataLoader
+warmup_iter:
+    value: 2000

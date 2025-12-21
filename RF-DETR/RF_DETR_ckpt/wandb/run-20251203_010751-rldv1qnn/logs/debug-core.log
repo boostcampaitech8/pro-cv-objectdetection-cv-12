@@ -1,0 +1,7 @@
+{"time":"2025-12-03T01:07:51.126514189Z","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpgmxdwgnt/port-248181.txt","pid":248181,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-12-03T01:07:51.127047924Z","level":"INFO","msg":"server: will exit if parent process dies","ppid":248181}
+{"time":"2025-12-03T01:07:51.126952512Z","level":"INFO","msg":"server: accepting connections","addr":{"Name":"/tmp/wandb-248181-248310-1497043336/socket","Net":"unix"}}
+{"time":"2025-12-03T01:07:51.307163318Z","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(@)"}
+{"time":"2025-12-03T01:07:51.314352275Z","level":"INFO","msg":"handleInformInit: received","streamId":"rldv1qnn","id":"1(@)"}
+{"time":"2025-12-03T01:07:51.795984261Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"rldv1qnn","id":"1(@)"}
+{"time":"2025-12-03T02:32:23.084430019Z","level":"INFO","msg":"server: parent process exited, terminating service process"}

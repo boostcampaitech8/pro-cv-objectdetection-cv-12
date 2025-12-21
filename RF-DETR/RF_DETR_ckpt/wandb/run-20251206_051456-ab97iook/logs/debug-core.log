@@ -1,0 +1,11 @@
+{"time":"2025-12-06T05:07:54.511383316Z","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpihqk89r2/port-989262.txt","pid":989262,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-12-06T05:07:54.512051448Z","level":"INFO","msg":"server: accepting connections","addr":{"Name":"/tmp/wandb-989262-989365-3660358552/socket","Net":"unix"}}
+{"time":"2025-12-06T05:07:54.512158195Z","level":"INFO","msg":"server: will exit if parent process dies","ppid":989262}
+{"time":"2025-12-06T05:07:54.694491919Z","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(@)"}
+{"time":"2025-12-06T05:07:54.700119891Z","level":"INFO","msg":"handleInformInit: received","streamId":"xlzi2cko","id":"1(@)"}
+{"time":"2025-12-06T05:07:55.074793926Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"xlzi2cko","id":"1(@)"}
+{"time":"2025-12-06T05:14:57.75988855Z","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"xlzi2cko","id":"1(@)"}
+{"time":"2025-12-06T05:14:57.762162879Z","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"xlzi2cko","id":"1(@)"}
+{"time":"2025-12-06T05:14:57.762162879Z","level":"INFO","msg":"handleInformInit: received","streamId":"ab97iook","id":"1(@)"}
+{"time":"2025-12-06T05:14:58.108070802Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"ab97iook","id":"1(@)"}
+{"time":"2025-12-06T07:17:00.186708625Z","level":"INFO","msg":"server: parent process exited, terminating service process"}

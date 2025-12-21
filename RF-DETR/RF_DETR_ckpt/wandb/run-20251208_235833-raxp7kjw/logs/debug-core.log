@@ -1,0 +1,18 @@
+{"time":"2025-12-08T23:58:01.235321792Z","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmp1zhk3txg/port-1639106.txt","pid":1639106,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-12-08T23:58:01.236240511Z","level":"INFO","msg":"server: will exit if parent process dies","ppid":1639106}
+{"time":"2025-12-08T23:58:01.236223791Z","level":"INFO","msg":"server: accepting connections","addr":{"Name":"/tmp/wandb-1639106-1639331-3715407436/socket","Net":"unix"}}
+{"time":"2025-12-08T23:58:01.417374024Z","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(@)"}
+{"time":"2025-12-08T23:58:01.422205156Z","level":"INFO","msg":"handleInformInit: received","streamId":"zbswhghy","id":"1(@)"}
+{"time":"2025-12-08T23:58:01.787825232Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"zbswhghy","id":"1(@)"}
+{"time":"2025-12-08T23:58:34.486779878Z","level":"INFO","msg":"handleInformFinish: finish message received","streamId":"zbswhghy","id":"1(@)"}
+{"time":"2025-12-08T23:58:34.488949837Z","level":"INFO","msg":"handleInformFinish: stream closed","streamId":"zbswhghy","id":"1(@)"}
+{"time":"2025-12-08T23:58:34.488949837Z","level":"INFO","msg":"handleInformInit: received","streamId":"raxp7kjw","id":"1(@)"}
+{"time":"2025-12-08T23:58:34.848483382Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"raxp7kjw","id":"1(@)"}
+{"time":"2025-12-09T00:01:41.596807676Z","level":"INFO","msg":"handleInformTeardown: server teardown initiated","id":"1(@)"}
+{"time":"2025-12-09T00:01:41.596982208Z","level":"INFO","msg":"connection: closing","id":"1(@)"}
+{"time":"2025-12-09T00:01:41.597094372Z","level":"INFO","msg":"connection: closed successfully","id":"1(@)"}
+{"time":"2025-12-09T00:01:41.597104494Z","level":"INFO","msg":"server is shutting down"}
+{"time":"2025-12-09T00:01:41.597134592Z","level":"INFO","msg":"server: listener closed","addr":{"Name":"/tmp/wandb-1639106-1639331-3715407436/socket","Net":"unix"}}
+{"time":"2025-12-09T00:01:42.505697879Z","level":"INFO","msg":"handleInformTeardown: server shutdown complete","id":"1(@)"}
+{"time":"2025-12-09T00:01:42.505697879Z","level":"INFO","msg":"connection: ManageConnectionData: connection closed","id":"1(@)"}
+{"time":"2025-12-09T00:01:42.505697879Z","level":"INFO","msg":"server is closed"}

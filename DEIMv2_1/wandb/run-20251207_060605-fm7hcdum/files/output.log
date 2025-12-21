@@ -1,0 +1,62 @@
+
+------------------------------------- Calculate Flops Results -------------------------------------
+Notations:
+number of parameters (Params), number of multiply-accumulate operations(MACs),
+number of floating-point operations (FLOPs), floating-point operations per second (FLOPS),
+fwd FLOPs (model forward propagation FLOPs), bwd FLOPs (model backward propagation FLOPs),
+default model backpropagation takes 2.00 times as much computation as forward propagation.
+
+Total Training Params:                                                  50.21 M
+fwd MACs:                                                               188.641 GMACs
+fwd FLOPs:                                                              377.827 GFLOPS
+fwd+bwd MACs:                                                           565.924 GMACs
+fwd+bwd FLOPs:                                                          1.1335 TFLOPS
+---------------------------------------------------------------------------------------------------
+{'Model FLOPs:377.827 GFLOPS   MACs:188.641 GMACs   Params:50206263'}
+------------------------------------------Start training-------------------------------------------
+Index 194: backbone.dinov3.blocks.11.mlp.w3.weight - requires_grad: True
+Index 195: backbone.dinov3.blocks.11.mlp.w3.bias - requires_grad: True
+     ## Using Self-defined Scheduler-flatcosine ##
+[1e-05, 1e-05, 0.0005, 0.0005] [5e-06, 5e-06, 0.00025, 0.00025] 15744 2000 6888 5904
+number of trainable parameters: 51067884
+number of non-trainable parameters: 2
+/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_engine.py:104: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  if not math.isfinite(loss_value):
+Epoch: [0]  [  0/492]  eta: 0:40:05  lr: 0.000000  loss: 77.2229 (77.2229)  loss_mal: 1.6162 (1.6162)  loss_bbox: 1.5467 (1.5467)  loss_giou: 1.7483 (1.7483)  loss_fgl: 0.4491 (0.4491)  loss_mal_aux_0: 1.2061 (1.2061)  loss_bbox_aux_0: 1.5615 (1.5615)  loss_giou_aux_0: 1.8661 (1.8661)  loss_fgl_aux_0: 0.5364 (0.5364)  loss_ddf_aux_0: 0.1365 (0.1365)  loss_mal_aux_1: 1.4180 (1.4180)  loss_bbox_aux_1: 1.5690 (1.5690)  loss_giou_aux_1: 1.7758 (1.7758)  loss_fgl_aux_1: 0.4884 (0.4884)  loss_ddf_aux_1: 0.0404 (0.0404)  loss_mal_aux_2: 1.5264 (1.5264)  loss_bbox_aux_2: 1.5453 (1.5453)  loss_giou_aux_2: 1.7640 (1.7640)  loss_fgl_aux_2: 0.4578 (0.4578)  loss_ddf_aux_2: 0.0080 (0.0080)  loss_mal_aux_3: 1.7139 (1.7139)  loss_bbox_aux_3: 1.5470 (1.5470)  loss_giou_aux_3: 1.7514 (1.7514)  loss_fgl_aux_3: 0.4482 (0.4482)  loss_ddf_aux_3: 0.0006 (0.0006)  loss_mal_aux_4: 1.7949 (1.7949)  loss_bbox_aux_4: 1.5473 (1.5473)  loss_giou_aux_4: 1.7488 (1.7488)  loss_fgl_aux_4: 0.4487 (0.4487)  loss_ddf_aux_4: 0.0000 (0.0000)  loss_mal_pre: 1.1533 (1.1533)  loss_bbox_pre: 1.6589 (1.6589)  loss_giou_pre: 1.9141 (1.9141)  loss_mal_enc_0: 3.8184 (3.8184)  loss_bbox_enc_0: 2.0648 (2.0648)  loss_giou_enc_0: 2.3191 (2.3191)  loss_mal_dn_0: 1.3027 (1.3027)  loss_bbox_dn_0: 0.9673 (0.9673)  loss_giou_dn_0: 1.3368 (1.3368)  loss_fgl_dn_0: 0.9020 (0.9020)  loss_ddf_dn_0: 0.1800 (0.1800)  loss_mal_dn_1: 1.7217 (1.7217)  loss_bbox_dn_1: 0.7838 (0.7838)  loss_giou_dn_1: 1.0982 (1.0982)  loss_fgl_dn_1: 0.9095 (0.9095)  loss_ddf_dn_1: 0.0691 (0.0691)  loss_mal_dn_2: 1.9688 (1.9688)  loss_bbox_dn_2: 0.7557 (0.7557)  loss_giou_dn_2: 1.0259 (1.0259)  loss_fgl_dn_2: 0.8917 (0.8917)  loss_ddf_dn_2: 0.0244 (0.0244)  loss_mal_dn_3: 2.1621 (2.1621)  loss_bbox_dn_3: 0.7444 (0.7444)  loss_giou_dn_3: 1.0237 (1.0237)  loss_fgl_dn_3: 0.9014 (0.9014)  loss_ddf_dn_3: 0.0057 (0.0057)  loss_mal_dn_4: 2.3516 (2.3516)  loss_bbox_dn_4: 0.7101 (0.7101)  loss_giou_dn_4: 0.9857 (0.9857)  loss_fgl_dn_4: 0.9097 (0.9097)  loss_ddf_dn_4: 0.0000 (0.0000)  loss_mal_dn_5: 2.0977 (2.0977)  loss_bbox_dn_5: 0.7098 (0.7098)  loss_giou_dn_5: 0.9851 (0.9851)  loss_fgl_dn_5: 0.9103 (0.9103)  loss_mal_dn_pre: 1.3389 (1.3389)  loss_bbox_dn_pre: 0.9544 (0.9544)  loss_giou_dn_pre: 1.3054 (1.3054)  time: 4.8890  data: 0.8642  max mem: 22333
+Traceback (most recent call last):
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 87, in <module>
+    main(args)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 57, in main
+    solver.fit()
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_solver.py", line 91, in fit
+    train_stats = train_one_epoch(
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_engine.py", line 72, in train_one_epoch
+    torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/utils/clip_grad.py", line 43, in _no_grad_wrapper
+    return func(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/utils/clip_grad.py", line 231, in clip_grad_norm_
+    total_norm = _get_total_norm(grads, norm_type, error_if_nonfinite, foreach)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/utils/clip_grad.py", line 43, in _no_grad_wrapper
+    return func(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/utils/clip_grad.py", line 96, in _get_total_norm
+    norms.extend(torch._foreach_norm(device_tensors, norm_type))
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 87, in <module>
+    main(args)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 57, in main
+    solver.fit()
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_solver.py", line 91, in fit
+    train_stats = train_one_epoch(
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_engine.py", line 72, in train_one_epoch
+    torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/utils/clip_grad.py", line 43, in _no_grad_wrapper
+    return func(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/utils/clip_grad.py", line 231, in clip_grad_norm_
+    total_norm = _get_total_norm(grads, norm_type, error_if_nonfinite, foreach)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/utils/clip_grad.py", line 43, in _no_grad_wrapper
+    return func(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/utils/clip_grad.py", line 96, in _get_total_norm
+    norms.extend(torch._foreach_norm(device_tensors, norm_type))
+KeyboardInterrupt

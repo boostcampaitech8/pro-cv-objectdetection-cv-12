@@ -1,0 +1,35 @@
+2025-12-09 00:03:56,841 INFO    MainThread:1640557 [wandb_setup.py:_flush():80] Current SDK version is 0.23.0
+2025-12-09 00:03:56,841 INFO    MainThread:1640557 [wandb_setup.py:_flush():80] Configure stats pid to 1640557
+2025-12-09 00:03:56,841 INFO    MainThread:1640557 [wandb_setup.py:_flush():80] Loading settings from /data/ephemeral/home/.config/wandb/settings
+2025-12-09 00:03:56,841 INFO    MainThread:1640557 [wandb_setup.py:_flush():80] Loading settings from /data/ephemeral/home/pybum_bumjin/baseline/faster_rcnn/wandb/settings
+2025-12-09 00:03:56,841 INFO    MainThread:1640557 [wandb_setup.py:_flush():80] Loading settings from environment variables
+2025-12-09 00:03:56,841 INFO    MainThread:1640557 [wandb_init.py:setup_run_log_directory():713] Logging user logs to ./RF_DETR_ckpt/wandb/run-20251209_000356-ch0kebms/logs/debug.log
+2025-12-09 00:03:56,841 INFO    MainThread:1640557 [wandb_init.py:setup_run_log_directory():714] Logging internal logs to ./RF_DETR_ckpt/wandb/run-20251209_000356-ch0kebms/logs/debug-internal.log
+2025-12-09 00:03:56,841 INFO    MainThread:1640557 [wandb_init.py:monkeypatch_ipython():632] configuring jupyter hooks <wandb.sdk.wandb_init._WandbInit object at 0x7f46bc4135e0>
+2025-12-09 00:03:56,841 INFO    MainThread:1640557 [wandb_init.py:init():840] calling init triggers
+2025-12-09 00:03:56,841 INFO    MainThread:1640557 [wandb_init.py:init():845] wandb.init called with sweep_config: {}
+config: {'lr': 0.0001, 'lr_encoder': 0.00015, 'batch_size': 4, 'grad_accum_steps': 4, 'epochs': 32, 'ema_decay': 0.993, 'ema_tau': 100, 'lr_drop': 100, 'checkpoint_interval': 5, 'warmup_epochs': 0.0, 'lr_vit_layer_decay': 0.8, 'lr_component_decay': 0.7, 'drop_path': 0.0, 'group_detr': 13, 'ia_bce_loss': True, 'cls_loss_coef': 1.0, 'num_select': 300, 'dataset_file': 'roboflow', 'square_resize_div_64': True, 'dataset_dir': '../../../dataset_split15/', 'output_dir': './RF_DETR_ckpt', 'multi_scale': True, 'expanded_scales': True, 'do_random_resize_via_padding': True, 'use_ema': True, 'num_workers': 2, 'weight_decay': 0.0001, 'early_stopping': True, 'early_stopping_patience': 5, 'early_stopping_min_delta': 0.001, 'early_stopping_use_ema': False, 'tensorboard': True, 'wandb': True, 'project': 'RFDETR', 'run': 'RFDETR_medium', 'class_names': None, 'run_test': True, 'segmentation_head': False, '_wandb': {}}
+2025-12-09 00:03:56,842 INFO    MainThread:1640557 [wandb_init.py:init():888] starting backend
+2025-12-09 00:03:57,089 INFO    MainThread:1640557 [wandb_init.py:init():891] sending inform_init request
+2025-12-09 00:03:57,092 INFO    MainThread:1640557 [wandb_init.py:init():899] backend started and connected
+2025-12-09 00:03:57,098 INFO    MainThread:1640557 [wandb_run.py:_label_probe_notebook():1323] probe notebook
+2025-12-09 00:03:57,099 INFO    MainThread:1640557 [wandb_run.py:_label_probe_notebook():1333] Unable to probe notebook: 'NoneType' object has no attribute 'get'
+2025-12-09 00:03:57,099 INFO    MainThread:1640557 [wandb_init.py:init():969] updated telemetry
+2025-12-09 00:03:57,139 INFO    MainThread:1640557 [wandb_init.py:init():993] communicating run to backend with 90.0 second timeout
+2025-12-09 00:03:57,883 INFO    MainThread:1640557 [wandb_init.py:init():1040] starting run threads in backend
+2025-12-09 00:03:58,104 INFO    MainThread:1640557 [wandb_run.py:_console_start():2504] atexit reg
+2025-12-09 00:03:58,104 INFO    MainThread:1640557 [wandb_run.py:_redirect():2352] redirect: wrap_raw
+2025-12-09 00:03:58,104 INFO    MainThread:1640557 [wandb_run.py:_redirect():2421] Wrapping output streams.
+2025-12-09 00:03:58,104 INFO    MainThread:1640557 [wandb_run.py:_redirect():2444] Redirects installed.
+2025-12-09 00:03:58,107 INFO    MainThread:1640557 [wandb_init.py:init():1080] run started, returning control to user process
+2025-12-09 00:04:09,518 INFO    MainThread:1640557 [wandb_init.py:_post_run_cell_hook():602] [no run ID] resuming backend
+2025-12-09 00:09:33,968 INFO    MainThread:1640557 [jupyter.py:save_ipynb():359] [no run ID] not saving jupyter notebook
+2025-12-09 00:09:33,968 INFO    MainThread:1640557 [wandb_init.py:_pre_run_cell_hook():591] [no run ID] pausing backend
+2025-12-09 00:09:35,165 INFO    MainThread:1640557 [wandb_run.py:_finish():2270] finishing run kimbum/RFDETR/ch0kebms
+2025-12-09 00:09:35,166 INFO    MainThread:1640557 [jupyter.py:save_history():435] not saving jupyter history
+2025-12-09 00:09:35,166 INFO    MainThread:1640557 [jupyter.py:save_ipynb():359] not saving jupyter notebook
+2025-12-09 00:09:35,166 INFO    MainThread:1640557 [wandb_init.py:_jupyter_teardown():617] cleaning up jupyter logic
+2025-12-09 00:09:35,166 INFO    MainThread:1640557 [wandb_run.py:_atexit_cleanup():2469] got exitcode: 0
+2025-12-09 00:09:35,166 INFO    MainThread:1640557 [wandb_run.py:_restore():2451] restore
+2025-12-09 00:09:35,166 INFO    MainThread:1640557 [wandb_run.py:_restore():2457] restore done
+2025-12-09 00:09:36,302 INFO    MainThread:1640557 [wandb_run.py:_footer_sync_info():3853] logging synced files

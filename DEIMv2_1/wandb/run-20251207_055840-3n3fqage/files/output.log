@@ -1,0 +1,92 @@
+Traceback (most recent call last):
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 87, in <module>
+    main(args)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 57, in main
+    solver.fit()
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_solver.py", line 36, in fit
+    n_parameters, model_stats = stats(self.cfg)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/misc/profiler_utils.py", line 18, in stats
+    flops, macs, _ = calculate_flops(model=model_for_info,
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/calflops/flops_counter.py", line 165, in calculate_flops
+    _ = model(*args)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1881, in _call_impl
+    return inner()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1829, in inner
+    result = forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/deim/deim.py", line 28, in forward
+    x = self.encoder(x)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1881, in _call_impl
+    return inner()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1829, in inner
+    result = forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/deim/hybrid_encoder.py", line 472, in forward
+    memory :torch.Tensor = self.encoder[i](src_flatten, pos_embed=pos_embed)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1881, in _call_impl
+    return inner()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1829, in inner
+    result = forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/deim/hybrid_encoder.py", line 328, in forward
+    output = layer(output, src_mask=src_mask, pos_embed=pos_embed)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1881, in _call_impl
+    return inner()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1829, in inner
+    result = forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/deim/hybrid_encoder.py", line 301, in forward
+    q = k = self.with_pos_embed(src, pos_embed)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/deim/hybrid_encoder.py", line 295, in with_pos_embed
+    return tensor if pos_embed is None else tensor + pos_embed
+RuntimeError: The size of tensor a (1024) must match the size of tensor b (400) at non-singleton dimension 1
+Traceback (most recent call last):
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 87, in <module>
+    main(args)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 57, in main
+    solver.fit()
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_solver.py", line 36, in fit
+    n_parameters, model_stats = stats(self.cfg)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/misc/profiler_utils.py", line 18, in stats
+    flops, macs, _ = calculate_flops(model=model_for_info,
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/calflops/flops_counter.py", line 165, in calculate_flops
+    _ = model(*args)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1881, in _call_impl
+    return inner()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1829, in inner
+    result = forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/deim/deim.py", line 28, in forward
+    x = self.encoder(x)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1881, in _call_impl
+    return inner()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1829, in inner
+    result = forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/deim/hybrid_encoder.py", line 472, in forward
+    memory :torch.Tensor = self.encoder[i](src_flatten, pos_embed=pos_embed)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1881, in _call_impl
+    return inner()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1829, in inner
+    result = forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/deim/hybrid_encoder.py", line 328, in forward
+    output = layer(output, src_mask=src_mask, pos_embed=pos_embed)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1881, in _call_impl
+    return inner()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1829, in inner
+    result = forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/deim/hybrid_encoder.py", line 301, in forward
+    q = k = self.with_pos_embed(src, pos_embed)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/deim/hybrid_encoder.py", line 295, in with_pos_embed
+    return tensor if pos_embed is None else tensor + pos_embed
+RuntimeError: The size of tensor a (1024) must match the size of tensor b (400) at non-singleton dimension 1

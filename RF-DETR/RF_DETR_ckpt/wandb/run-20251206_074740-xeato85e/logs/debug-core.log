@@ -1,0 +1,7 @@
+{"time":"2025-12-06T07:47:40.156436443Z","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpffg8ty8t/port-1022922.txt","pid":1022922,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false,"enable-dcgm-profiling":false}
+{"time":"2025-12-06T07:47:40.156975833Z","level":"INFO","msg":"server: will exit if parent process dies","ppid":1022922}
+{"time":"2025-12-06T07:47:40.156975833Z","level":"INFO","msg":"server: accepting connections","addr":{"Name":"/tmp/wandb-1022922-1023142-4268540771/socket","Net":"unix"}}
+{"time":"2025-12-06T07:47:40.3357269Z","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"1(@)"}
+{"time":"2025-12-06T07:47:40.341241706Z","level":"INFO","msg":"handleInformInit: received","streamId":"xeato85e","id":"1(@)"}
+{"time":"2025-12-06T07:47:40.727295359Z","level":"INFO","msg":"handleInformInit: stream started","streamId":"xeato85e","id":"1(@)"}
+{"time":"2025-12-06T09:42:59.490066411Z","level":"INFO","msg":"server: parent process exited, terminating service process"}

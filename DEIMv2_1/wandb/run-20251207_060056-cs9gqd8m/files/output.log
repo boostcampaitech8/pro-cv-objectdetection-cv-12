@@ -1,0 +1,119 @@
+
+------------------------------------- Calculate Flops Results -------------------------------------
+Notations:
+number of parameters (Params), number of multiply-accumulate operations(MACs),
+number of floating-point operations (FLOPs), floating-point operations per second (FLOPS),
+fwd FLOPs (model forward propagation FLOPs), bwd FLOPs (model backward propagation FLOPs),
+default model backpropagation takes 2.00 times as much computation as forward propagation.
+
+Total Training Params:                                                  50.21 M
+fwd MACs:                                                               188.641 GMACs
+fwd FLOPs:                                                              377.827 GFLOPS
+fwd+bwd MACs:                                                           565.924 GMACs
+fwd+bwd FLOPs:                                                          1.1335 TFLOPS
+---------------------------------------------------------------------------------------------------
+{'Model FLOPs:377.827 GFLOPS   MACs:188.641 GMACs   Params:50206263'}
+------------------------------------------Start training-------------------------------------------
+Index 194: backbone.dinov3.blocks.11.mlp.w3.weight - requires_grad: True
+Index 195: backbone.dinov3.blocks.11.mlp.w3.bias - requires_grad: True
+     ## Using Self-defined Scheduler-flatcosine ##
+[1e-05, 1e-05, 0.0005, 0.0005] [5e-06, 5e-06, 0.00025, 0.00025] 15744 2000 6888 5904
+number of trainable parameters: 51067884
+number of non-trainable parameters: 2
+Traceback (most recent call last):
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 87, in <module>
+    main(args)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 57, in main
+    solver.fit()
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_solver.py", line 91, in fit
+    train_stats = train_one_epoch(
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_engine.py", line 42, in train_one_epoch
+    for i, (samples, targets) in enumerate(metric_logger.log_every(data_loader, print_freq, header)):
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/misc/logger.py", line 215, in log_every
+    for obj in iterable:
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 732, in __next__
+    data = self._next_data()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1506, in _next_data
+    return self._process_data(data, worker_id)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1541, in _process_data
+    data.reraise()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/_utils.py", line 769, in reraise
+    raise exception
+NotImplementedError: Caught NotImplementedError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/data/dataset/coco_dataset.py", line 44, in __getitem__
+    img, target, _ = self._transforms(img, target, self)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/data/transforms/container.py", line 58, in forward
+    return self.get_forward(self.policy['name'])(*inputs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/data/transforms/container.py", line 99, in stop_epoch_forward
+    sample = transform(sample)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torchvision/transforms/v2/_transform.py", line 68, in forward
+    flat_outputs = [
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torchvision/transforms/v2/_transform.py", line 69, in <listcomp>
+    self.transform(inpt, params) if needs_transform else inpt
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torchvision/transforms/v2/_transform.py", line 55, in transform
+    raise NotImplementedError
+NotImplementedError
+
+Traceback (most recent call last):
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 87, in <module>
+    main(args)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/train.py", line 57, in main
+    solver.fit()
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_solver.py", line 91, in fit
+    train_stats = train_one_epoch(
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/solver/det_engine.py", line 42, in train_one_epoch
+    for i, (samples, targets) in enumerate(metric_logger.log_every(data_loader, print_freq, header)):
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/misc/logger.py", line 215, in log_every
+    for obj in iterable:
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 732, in __next__
+    data = self._next_data()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1506, in _next_data
+    return self._process_data(data, worker_id)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1541, in _process_data
+    data.reraise()
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/_utils.py", line 769, in reraise
+    raise exception
+NotImplementedError: Caught NotImplementedError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/data/dataset/coco_dataset.py", line 44, in __getitem__
+    img, target, _ = self._transforms(img, target, self)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/data/transforms/container.py", line 58, in forward
+    return self.get_forward(self.policy['name'])(*inputs)
+  File "/data/ephemeral/home/pybum_bumjin/DEIMv2/engine/data/transforms/container.py", line 99, in stop_epoch_forward
+    sample = transform(sample)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torchvision/transforms/v2/_transform.py", line 68, in forward
+    flat_outputs = [
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torchvision/transforms/v2/_transform.py", line 69, in <listcomp>
+    self.transform(inpt, params) if needs_transform else inpt
+  File "/data/ephemeral/home/pybum/lib/python3.10/site-packages/torchvision/transforms/v2/_transform.py", line 55, in transform
+    raise NotImplementedError
+NotImplementedError

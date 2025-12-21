@@ -1,0 +1,33 @@
+W&B logging initialized. To monitor logs, open https://wandb.ai/kimbum/RFDETR/runs/x2be7rh5.
+Not using distributed mode
+fatal: not a git repository (or any parent up to mount point /data)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+git:
+  sha: N/A, status: clean, branch: N/A
+
+Namespace(num_classes=10, grad_accum_steps=4, amp=True, lr=0.0001, lr_encoder=0.00015, batch_size=4, weight_decay=0.0001, epochs=32, lr_drop=100, clip_max_norm=0.1, lr_vit_layer_decay=0.8, lr_component_decay=0.7, do_benchmark=False, dropout=0, drop_path=0.0, drop_mode='standard', drop_schedule='constant', cutoff_epoch=0, pretrained_encoder=None, pretrain_weights='rf-detr-medium.pth', pretrain_exclude_keys=None, pretrain_keys_modify_to_load=None, pretrained_distiller=None, encoder='dinov2_windowed_small', vit_encoder_num_layers=12, window_block_indexes=None, position_embedding='sine', out_feature_indexes=[3, 6, 9, 12], freeze_encoder=False, layer_norm=True, rms_norm=False, backbone_lora=False, force_no_pretrain=False, dec_layers=4, dim_feedforward=2048, hidden_dim=256, sa_nheads=8, ca_nheads=16, num_queries=300, group_detr=13, two_stage=True, projector_scale=['P4'], lite_refpoint_refine=True, num_select=300, dec_n_points=2, decoder_norm='LN', bbox_reparam=True, freeze_batch_norm=False, set_cost_class=2, set_cost_bbox=5, set_cost_giou=2, cls_loss_coef=1.0, bbox_loss_coef=5, giou_loss_coef=2, focal_alpha=0.25, aux_loss=True, sum_group_losses=False, use_varifocal_loss=False, use_position_supervised_loss=False, ia_bce_loss=True, dataset_file='roboflow', coco_path=None, dataset_dir='../../../dataset_split15/', square_resize_div_64=True, output_dir='./RF_DETR_ckpt', dont_save_weights=False, checkpoint_interval=5, seed=42, resume='', start_epoch=0, eval=False, use_ema=True, ema_decay=0.993, ema_tau=100, num_workers=2, device='cuda', world_size=1, dist_url='env://', sync_bn=True, fp16_eval=False, encoder_only=False, backbone_only=False, resolution=768, use_cls_token=False, multi_scale=True, expanded_scales=True, do_random_resize_via_padding=True, warmup_epochs=0.0, lr_scheduler='step', lr_min_factor=0.0, early_stopping=True, early_stopping_patience=5, early_stopping_min_delta=0.001, early_stopping_use_ema=False, gradient_checkpointing=False, patch_size=16, num_windows=2, positional_encoding_size=36, mask_downsample_ratio=4, tensorboard=True, wandb=True, project='RFDETR', run='RFDETR_medium', class_names=['General trash', 'Paper', 'Paper pack', 'Metal', 'Glass', 'Plastic', 'Styrofoam', 'Plastic bag', 'Battery', 'Clothing'], run_test=True, segmentation_head=False, distributed=False)
+number of params: 33396020
+[608, 640, 672, 704, 736, 768, 800, 832, 864, 896, 928]
+loading annotations into memory...
+Done (t=0.07s)
+creating index...
+index created!
+[608, 640, 672, 704, 736, 768, 800, 832, 864, 896, 928]
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[608, 640, 672, 704, 736, 768, 800, 832, 864, 896, 928]
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+Get benchmark
+Start training
+Grad accum steps:  4
+Total batch size:  16
+LENGTH OF DATA LOADER: 260
+UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:345.)
+UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:345.)
+UserWarning: Using a non-tuple sequence for multidimensional indexing is deprecated and will be changed in pytorch 2.9; use x[tuple(seq)] instead of x[seq]. In pytorch 2.9 this will be interpreted as tensor index, x[torch.tensor(seq)], which will result either in an error or a different result (Triggered internally at /pytorch/torch/csrc/autograd/python_variable_indexing.cpp:345.)
+Epoch: [0]  [  0/260]  eta: 0:21:36  lr: 0.000100  class_error: 77.78  loss: 12.4223 (12.4223)  loss_ce: 1.0224 (1.0224)  loss_bbox: 0.5054 (0.5054)  loss_giou: 0.7013 (0.7013)  loss_ce_0: 0.9757 (0.9757)  loss_bbox_0: 0.6239 (0.6239)  loss_giou_0: 0.9214 (0.9214)  loss_ce_1: 1.0282 (1.0282)  loss_bbox_1: 0.5036 (0.5036)  loss_giou_1: 0.7948 (0.7948)  loss_ce_2: 1.0272 (1.0272)  loss_bbox_2: 0.5118 (0.5118)  loss_giou_2: 0.7156 (0.7156)  loss_ce_enc: 0.8617 (0.8617)  loss_bbox_enc: 1.0262 (1.0262)  loss_giou_enc: 1.2032 (1.2032)  loss_ce_unscaled: 1.0224 (1.0224)  class_error_unscaled: 77.7778 (77.7778)  loss_bbox_unscaled: 0.1011 (0.1011)  loss_giou_unscaled: 0.3506 (0.3506)  cardinality_error_unscaled: 3869.7500 (3869.7500)  loss_ce_0_unscaled: 0.9757 (0.9757)  loss_bbox_0_unscaled: 0.1248 (0.1248)  loss_giou_0_unscaled: 0.4607 (0.4607)  cardinality_error_0_unscaled: 3850.7500 (3850.7500)  loss_ce_1_unscaled: 1.0282 (1.0282)  loss_bbox_1_unscaled: 0.1007 (0.1007)  loss_giou_1_unscaled: 0.3974 (0.3974)  cardinality_error_1_unscaled: 3864.0000 (3864.0000)  loss_ce_2_unscaled: 1.0272 (1.0272)  loss_bbox_2_unscaled: 0.1024 (0.1024)  loss_giou_2_unscaled: 0.3578 (0.3578)  cardinality_error_2_unscaled: 3864.5000 (3864.5000)  loss_ce_enc_unscaled: 0.8617 (0.8617)  loss_bbox_enc_unscaled: 0.2052 (0.2052)  loss_giou_enc_unscaled: 0.6016 (0.6016)  cardinality_error_enc_unscaled: 3883.5000 (3883.5000)  time: 4.9848  data: 1.1868  max mem: 29569

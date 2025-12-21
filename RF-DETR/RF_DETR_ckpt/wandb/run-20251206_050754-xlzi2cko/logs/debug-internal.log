@@ -1,0 +1,14 @@
+{"time":"2025-12-06T05:07:54.700276246Z","level":"INFO","msg":"stream: starting","core version":"0.23.0"}
+{"time":"2025-12-06T05:07:55.074598681Z","level":"INFO","msg":"stream: created new stream","id":"xlzi2cko"}
+{"time":"2025-12-06T05:07:55.074637388Z","level":"INFO","msg":"handler: started","stream_id":"xlzi2cko"}
+{"time":"2025-12-06T05:07:55.074781385Z","level":"INFO","msg":"stream: started","id":"xlzi2cko"}
+{"time":"2025-12-06T05:07:55.074807946Z","level":"INFO","msg":"sender: started","stream_id":"xlzi2cko"}
+{"time":"2025-12-06T05:07:55.074807946Z","level":"INFO","msg":"writer: started","stream_id":"xlzi2cko"}
+{"time":"2025-12-06T05:07:55.942605691Z","level":"INFO","msg":"flowcontrol: backed up, offloading to disk","recordNumber":38}
+{"time":"2025-12-06T05:07:55.990458692Z","level":"INFO","msg":"flowcontrol: unblocked","totalOffloaded":12}
+{"time":"2025-12-06T05:14:57.38826271Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-12-06T05:14:57.753943512Z","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-12-06T05:14:57.759906655Z","level":"INFO","msg":"stream: closing","id":"xlzi2cko"}
+{"time":"2025-12-06T05:14:57.759906655Z","level":"INFO","msg":"handler: closed","stream_id":"xlzi2cko"}
+{"time":"2025-12-06T05:14:57.760002754Z","level":"INFO","msg":"sender: closed","stream_id":"xlzi2cko"}
+{"time":"2025-12-06T05:14:57.760002754Z","level":"INFO","msg":"stream: closed","id":"xlzi2cko"}

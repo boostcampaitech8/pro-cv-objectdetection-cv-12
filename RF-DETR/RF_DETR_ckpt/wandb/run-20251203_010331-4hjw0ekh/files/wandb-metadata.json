@@ -1,0 +1,35 @@
+{
+  "os": "Linux-5.4.0-99-generic-x86_64-with-glibc2.31",
+  "python": "CPython 3.10.13",
+  "startedAt": "2025-12-03T01:03:31.981683Z",
+  "program": "pybum_bumjin/baseline/faster_rcnn/rfdetr_train.ipynb",
+  "codePath": "pybum_bumjin/baseline/faster_rcnn/rfdetr_train.ipynb",
+  "email": "kimbum1018@gmail.com",
+  "root": "./RF_DETR_ckpt",
+  "host": "instance-17204",
+  "executable": "/data/ephemeral/home/pybum/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 8,
+  "gpu": "Tesla V100-SXM2-32GB",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "52573995008",
+      "used": "38228905984"
+    }
+  },
+  "memory": {
+    "total": "94903173120"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "Tesla V100-SXM2-32GB",
+      "memoryTotal": "34359738368",
+      "cudaCores": 5120,
+      "architecture": "Volta",
+      "uuid": "GPU-b8984d8d-1d0e-07f1-2bb5-cf00c2eb72f9"
+    }
+  ],
+  "cudaVersion": "12.2",
+  "writerId": "nkmk6d8waagedm8hj9rgkng70q3lfkd9"
+}
